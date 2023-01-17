@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveStation</title>
+    <link rel="stylesheet" href="stream.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://kit.fontawesome.com/4ec9717d65.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+    
+    <style>
+      .body{
+       margin: 0;
+       padding: 0;
+       height: 90vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      }
+      .slider{
+        width: 800px;
+        height: 800px;
+        border-radius: 10px;
+        overflow: hidden; 
+      }
+      .slides{
+        width: 500%;
+        height: 300px;
+        display: flex;
+      }
+      .slides input{
+        display: none;
+      }
+      .slide{
+        width: 20%;
+        transition: 2s;
+      }
+      .slide img{
+        width: 800px;
+        height: 500px;
+      }
+      .navigation-manual{
+        position: absolute;
+        width: 800px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+      }
+      .navigation-btn{
+        border: 2px solid #40D3DC;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+      }
+      .manual-btn:not(:last-child){
+        margin-right: 40px;
+      }
+      .manual-btn:hover{
+        background: #40D3DC;
+      }
+      #radio1:checked ~ .first{
+        margin-left: 0;
+      }
+      #radio2:checked ~ .first{
+        margin-left: -20%;
+      }
+      #radio3:checked ~ .first{
+        margin-left: -40%;
+      }
+      #radio4:checked ~ .first{
+        margin-left: -60%;
+      }
+      .navigation-auto {
+        position: absolute;
+        display: flex;
+        width: 800px;
+        justify-content: center;
+        margin-top: 460px;
+      }
+      .navigation-auto div{
+        border: 2px solid #40D3DC;
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s;
+      }
+      .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+      }
+      #radio1:checked ~ .navigation-auto .autobtn1{
+        background: #40D3DC;
+      }
+      #radio2:checked ~ .navigation-auto .autobtn2{
+        background: #40D3DC;
+      }
+      #radio3:checked ~ .navigation-auto .autobtn3{
+        background: #40D3DC;
+      }
+      #radio4:checked ~ .navigation-auto .autobtn4{
+        background: #40D3DC;
+      }
+      .logo{
+        margin-right: 900px;
+      }
+      .link1{
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      }
+
+      @media screen and (max-width: 960px){
+        .slider{
+          width: 100%;
+          height: 100%;
+        }
+       
+        .slide img{
+          width: 100%;
+          height: 100%;
+        } 
+        .logo1{
+          display: flex;
+          align-items: center;
+          margin-bottom: -92px;
+        }
+        .butt1{
+          margin-top: -250px;
+          
+        }
+        .footer{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .logo{
+          display: flex;
+          justify-content: left;
+          margin-right: 10px;
+          margin-bottom: 50px;
+        }
+        .link1{
+          margin-top: 50px;
+          margin-left: -170px;
+        }
+
+
+      } 
+       
+      
+       
+
+
+    </style>
+</head>
+<body class="container-fluid bg-secondary">
+
+  
+
+   <div class="container-fluid logo1"> <img src="../LiveStation/image/Livestation logo.png" class="img-fluid " alt="" style="margin-bottom: 150px;"></div>
+   
+   <div class="body ">
+
+   <div class="slider">
+    <div class="slides">
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+
+      <div class="slide first">
+        <img src="../LiveStation/image/img 4.jpg" alt="">
+      </div>
+      <div class="slide ">
+        <img src="../LiveStation/image/img 2.jpg" alt="">
+      </div>
+      <div class="slide ">
+        <img src="../LiveStation/image/img 3.jpg" alt="">
+      </div>
+      <div class="slide ">
+        <img src="../LiveStation/image/img7.jpg" alt="">
+      </div>
+
+      
+
+      </div>
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+   </div>
+  </div>
+  <div class="text-center butt1"><a href="stream.html"   class="p-4 m-5 border border-dark border-3 fw-bolder  text-black btn-default view zoom"
+    style="border-radius: 50px; text-decoration: none;"
+    >LET'S STREAM</a></div>
+   <div>
+      <div class="container class7"
+      style="display: flex; align-items: center; justify-content: center; margin-top: 120px; margin-bottom: 80px;">
+         <div class="row">
+           <div class="col-sm-6">
+             <img src="image/a7.png" alt="" class="class8"
+             style=" padding-right: 40px; margin-bottom: 50px;">
+           </div>
+           <div class="col-sm-6">
+             <img src="image/a8.png" alt="" class="class8"
+             style=" padding-right: 40px; margin-bottom: 50px;">
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-sm-6">
+             <img src="image/a5.png" alt="" class="class8"
+             style=" padding-right: 40px; margin-bottom: 50px;">
+           </div>
+           <div class="col-sm-6">
+         <img src="image/a4.png" alt="" class="class8"
+         style=" padding-right: 40px; margin-bottom: 50px;">
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-sm-6">
+             <img src="image/a3.png" alt="" class="class8"
+             style=" padding-right: 40px; margin-bottom: 50px;">
+           </div>
+           <div class="col-sm-6">
+             <img src="image/a1.png" alt="" class="class8"
+             style=" padding-right: 40px; margin-bottom: 50px;">
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-sm-6">
+         <img src="image/a2.png" alt="" class="class8"
+         style=" padding-right: 40px;  margin-bottom: 50px; margin-top: 20px;">
+           </div>
+           <div class="col-sm-6">
+         <img src="image/a6.png" alt="" class="class8"
+         style=" padding-right: 40px;  margin-bottom: 50px;">
+         </div>
+       </div>
+       </div>
+   </div>
+
+   <div class="">
+   <div class="footer"
+   style="display: flex; background-color: gray; padding: 20px;">
+    <a href="#" class="logo"> <img src="image/Livestation logo.png" alt=""> </a>
+    <div class="link1" >
+    <a href="https://twitter.com/the__man__21" class="fa-brands fa-twitter"
+    style="padding-right: 20px;"></a>
+    <a href="https://www.instagram.com/21.livestation/" class="fa-brands fa-instagram"
+    style="padding-right: 20px;"></a>
+    <a href="https://web.facebook.com/profile.php?id=100089601002176" class="fa-brands fa-facebook"
+    style="padding-right: 20px;"></a>
+  </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  var counter = 1;
+  setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 4){
+      counter = 1;
+    }
+  }, 5000);
+</script>
+</body>
+</html>
+
+
+<!-- <div class="text-center"><a href="stream.html"   class="p-4 m-5 border border-dark border-3 fw-bolder  text-black btn-default view zoom"
+         style="border-radius: 50px; text-decoration: none; "
+         >LET'S STREAM</a></div> -->
